@@ -1,0 +1,344 @@
+/* ==========================================
+   RESET & GLOBAL
+========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(ellipse at top left, #0f172a, #020617);
+    padding: 1.5rem;
+    margin: 0;
+    color: #e2e8f0;
+}
+
+/* ==========================================
+   CONTAINER UTAMA
+========================================== */
+.container {
+    width: 100%;
+    max-width: 480px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 32px;
+    padding: 2rem 1.75rem;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.logo i {
+    font-size: 1.6rem;
+    color: #25D366;
+    background: rgba(37, 211, 102, 0.15);
+    padding: 0.4rem;
+    border-radius: 12px;
+}
+
+.badge {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.25rem 0.7rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 100px;
+    color: #94a3b8;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ==========================================
+   HERO
+========================================== */
+.hero {
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero p {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    margin-top: 0.4rem;
+    font-weight: 400;
+}
+
+/* ==========================================
+   FORM
+========================================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.input-group label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #cbd5e1;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.input-group label i {
+    color: #25D366;
+    font-size: 0.85rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    transition: all 0.25s ease;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #64748b;
+    font-weight: 400;
+}
+
+.input-group input:focus {
+    border-color: #25D366;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.1);
+}
+
+/* ==========================================
+   EMOJI PICKER
+========================================== */
+.emoji-wrapper {
+    position: relative;
+}
+
+.emoji-picker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-top: 0.6rem;
+}
+
+.emoji-picker button {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.05);
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emoji-picker button:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: scale(1.1);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.emoji-picker button:active {
+    transform: scale(0.95);
+}
+
+/* ==========================================
+   SUBMIT BUTTON
+========================================== */
+#submitBtn {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    border: none;
+    border-radius: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.25);
+}
+
+#submitBtn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.35);
+}
+
+#submitBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ==========================================
+   RESULT
+========================================== */
+.result {
+    margin-top: 1.5rem;
+    padding: 1rem 1.2rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.result.hidden {
+    display: none;
+}
+
+.result.success {
+    background: rgba(37, 211, 102, 0.1);
+    border-color: rgba(37, 211, 102, 0.25);
+    color: #4ade80;
+}
+
+.result.error {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: rgba(239, 68, 68, 0.25);
+    color: #f87171;
+}
+
+.result-icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+.footer {
+    margin-top: 2rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.footer p {
+    font-size: 0.7rem;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.footer .status {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.footer .status i {
+    font-size: 0.45rem;
+    color: #22c55e;
+}
+
+#statusText {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem 1.25rem;
+        border-radius: 24px;
+    }
+
+    .hero h1 {
+        font-size: 1.3rem;
+    }
+
+    .emoji-picker button {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+    }
+
+    #submitBtn {
+        font-size: 0.9rem;
+        padding: 0.85rem;
+    }
+}
+
+/* ==========================================
+   ANIMASI
+========================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.result {
+    animation: fadeInUp 0.3s ease-out;
+}
