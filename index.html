@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXO AUTO REACT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="brand">
+                <div class="logo" id="logo">⚡</div>
+                <div class="brand-text">
+                    <strong>AXO</strong>
+                    <small>AUTO REACT</small>
+                </div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center;">
+                <button id="themeToggle" style="background:none;border:1px solid rgba(255,255,255,0.05);border-radius:30px;padding:6px 14px;color:rgba(255,255,255,0.4);font-size:16px;cursor:pointer;transition:0.3s;">🌙</button>
+                <div class="online-badge">
+                    <span class="dot"></span> Online
+                </div>
+            </div>
+        </div>
+
+        <div class="subtitle">Kirim reaction ke Channel WhatsApp · Tanpa ribet</div>
+
+        <!-- REACTION CARD -->
+        <div class="reaction-card">
+            <div class="card-heading">
+                <div>
+                    <span>CHANNEL REACTION</span>
+                    <h2>Kirim Reaction</h2>
+                </div>
+                <span class="status-pill">⚡ API Ready</span>
+            </div>
+
+            <form id="reactionForm">
+                <!-- URL -->
+                <label class="field-label" for="postUrl">Link pesan Channel</label>
+                <div class="field">
+                    <span class="icon">🔗</span>
+                    <input id="postUrl" type="url" placeholder="https://whatsapp.com/channel/.../436" required>
+                </div>
+
+                <!-- EMOJI -->
+                <label class="field-label second-label" for="reactionInput">Emoji reaction</label>
+                <div class="field emoji-field">
+                    <span class="emoji-preview" id="emojiPreview">❤️</span>
+                    <input id="reactionInput" type="text" placeholder="❤️,🫶🏻,👍🏻" maxlength="120" required>
+                </div>
+
+                <!-- QUICK EMOJI -->
+                <div class="quick-emojis" id="quickEmojis">
+                    <button type="button" data-emoji="❤️">❤️</button>
+                    <button type="button" data-emoji="🫶🏻">🫶🏻</button>
+                    <button type="button" data-emoji="👍🏻">👍🏻</button>
+                    <button type="button" data-emoji="🔥">🔥</button>
+                    <button type="button" data-emoji="😂">😂</button>
+                    <button type="button" data-emoji="🥰">🥰</button>
+                </div>
+
+                <!-- CHIPS -->
+                <div class="emoji-chips" id="emojiChips"></div>
+
+                <!-- SUBMIT -->
+                <button class="submit-btn" id="submitBtn" type="submit">
+                    <span class="btn-text">🚀 Kirim Reaction</span>
+                    <span class="spinner"></span>
+                </button>
+            </form>
+
+            <!-- NOTIFICATION -->
+            <div class="notice" id="notice"></div>
+
+            <!-- HISTORY (HANYA TAMPILAN, TIDAK UBAH SISTEM) -->
+            <div id="history" style="margin-top:16px;color:rgba(255,255,255,0.15);font-size:11px;text-align:center;display:none;">
+                📜 Riwayat: <span id="historyList">Belum ada</span>
+            </div>
+
+            <!-- SERVICE STATUS -->
+            <div class="service-status">
+                <div class="service-main">
+                    <span class="service-dot"></span>
+                    <div>
+                        <strong>Layanan siap</strong>
+                        <p>Reaction diproses oleh worker AXO</p>
+                    </div>
+                </div>
+                <div class="limit-pill">
+                    <small>LIMIT HARIAN</small>
+                    <strong id="limitUsed">0</strong>
+                    <span> / 10</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- GUIDE -->
+        <div class="guide-card">
+            <span>PANDUAN</span>
+            <h3>Reaction pesan Channel</h3>
+            <div class="guide-steps">
+                <div><b>1</b><p>Buka Channel WhatsApp, pilih pesan, salin tautan.</p></div>
+                <div><b>2</b><p>Tempel link ke kolom pertama.</p></div>
+                <div><b>3</b><p>Isi emoji, pisah dengan koma.<br><strong>❤️,🫶🏻,👍🏻</strong></p></div>
+                <div><b>4</b><p>Klik Kirim Reaction, tunggu proses.</p></div>
+            </div>
+        </div>
+
+        <div class="footer"><strong>AXO</strong> · Auto React · Edukasi</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
